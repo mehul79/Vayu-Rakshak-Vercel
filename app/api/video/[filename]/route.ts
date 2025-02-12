@@ -11,7 +11,7 @@ export async function GET(
     console.log("[Video API] Requested filename:", filename);
 
     const videoPath = path.join(
-      process.env.NEXT_PUBLIC_VIDEO_STORAGE_PATH,
+      process.env.NEXT_PUBLIC_VIDEO_STORAGE_PATH || '',
       filename
     );
     console.log("[Video API] Full video path:", videoPath);
