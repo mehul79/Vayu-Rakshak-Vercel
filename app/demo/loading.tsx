@@ -1,7 +1,11 @@
-export default function Loading() {
+"use client"
+
+import { Skeleton } from "@/components/ui/skeleton"
+
+export default function loading() {
   return (
-    <div className="flex justify-center items-center min-h-screen">
-      <div className="animate-spin rounded-full h-16 w-16 border-t-2 border-b-2 border-blue-500"></div>
+    <div className=" h-screen flex flex-col space-y-3 justify-center items-center">
+      <Skeleton className="h-[375px] w-[500px] rounded-xl" />
     </div>
   )
 }

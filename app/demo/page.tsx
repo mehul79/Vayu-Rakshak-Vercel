@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import styles from "./demo.module.css";
 
 export default function DemoPage() {
   const [position, setPosition] = useState(50);
@@ -70,7 +69,7 @@ export default function DemoPage() {
             playsInline
           >
             <source
-              src={process.env.NEXT_PUBLIC_DEMO_BEFORE_VIDEO}
+              src="https://kw688kyjhh.ufs.sh/f/eYl2Z2vMEU84a6fmM8t7yIZS6rEhjndNMbCxf8JvVpe9wUHK"
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -92,7 +91,7 @@ export default function DemoPage() {
             playsInline
           >
             <source
-              src={process.env.NEXT_PUBLIC_DEMO_AFTER_VIDEO}
+              src="https://kw688kyjhh.ufs.sh/f/eYl2Z2vMEU84DPJuTRS0qVJdAQMiaYb48nXuvj9RUKymHsES"
               type="video/mp4"
             />
             Your browser does not support the video tag.
