@@ -86,9 +86,15 @@ body {
 
 @layer base {
   * {
-    /* @apply border-border; */
+    @apply border-border;
   }
   body {
     @apply bg-background text-foreground;
   }
 }
+
+::selection {
+  background-color: rgba(232, 176, 32, 0.3);
+  color: #f77f00;
+}
+
