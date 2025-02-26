@@ -5,6 +5,7 @@ import { MetricsCard } from "@/components/ui/metrics-card";
 import { StatsChart } from "@/components/ui/stats-chart";
 import { Users, Clock } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Navbar } from "@/components/navbar";
 
 const videoData = {
   message: "Video lol1.mp4 has been processed.",
@@ -185,13 +186,14 @@ export default function Page() {
   return (
     <div className="min-h-screen flex flex-col">
       <main className="flex-1 bg-background relative">
+        
         {isMounted && (
           <div
-            className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
-            aria-hidden="true"
+          className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"
+          aria-hidden="true"
           />
         )}
-
+        <Navbar />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="mb-8">
             <h1 className="text-3xl font-bold text-foreground">

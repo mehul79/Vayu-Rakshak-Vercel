@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
+// import { Navbar } from "@/components/navbar";
 
 export const metadata: Metadata = {
   title: process.env.NEXT_PUBLIC_APP_NAME,
@@ -26,7 +27,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="relative flex min-h-screen flex-col">
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
         </div>
       </body>

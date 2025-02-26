@@ -1,6 +1,7 @@
 "use client";
 import { Suspense, useEffect, useRef, useState } from "react";
 import LoadingSkeleton from "@/components/loading";
+import { Navbar } from "@/components/navbar";
 
 export default function DemoPage() {
   const [position, setPosition] = useState(50);
@@ -43,8 +44,9 @@ export default function DemoPage() {
   }, []);
 
   return (
+    <div>
+      <Navbar />
     <div className="max-w-7xl mx-auto px-4 py-8 overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
 
       <h1 className="text-3xl font-bold text-center mb-8 relative">
@@ -126,6 +128,7 @@ export default function DemoPage() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }

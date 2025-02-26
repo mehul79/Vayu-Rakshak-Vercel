@@ -13,27 +13,26 @@ import {
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Globe } from "@/components/magicui/globe";
+import { Navbar } from "@/components/navbar";
 
 export default function Home() {
   return (
-    <div className="flex flex-col ">
-      <main className="flex-1">
+    <div className="flex flex-col">
+      <div className="absolute top-0 left-0 right-0 h-screen bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
+      <Navbar />
+      <main>
         <section className="relative">
-          <div className="absolute inset-0 bg-gradient-to-b from-background via-background/90 to-background">
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]" />
-          </div>
-
           <div className="container relative">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 py-24">
               <div className="space-y-8">
                 <div className="space-y-6">
-                  <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
+                  <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl lg:text-7xl">
                     Detect. Respond.{" "}
                     <span className="bg-gradient-to-r from-primary to-primary/50 bg-clip-text text-transparent">
                       Save Lives.
                     </span>
                   </h1>
-                  <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
+                  <p className="text-muted-foreground sm:text-xl">
                     Ensure accuracy and efficiency in disaster response with our
                     AI-powered drone system. Achieve up to 98% precision in
                     real-time survivor detection.
@@ -58,25 +57,21 @@ export default function Home() {
                   </div>
                   <div className="space-y-2">
                     <h4 className="text-4xl font-bold text-primary">24/7</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Coverage
-                    </p>
+                    <p className="text-sm text-muted-foreground">Coverage</p>
                   </div>
                   <div className="space-y-2">
                     <h4 className="text-4xl font-bold text-primary">10M+</h4>
-                    <p className="text-sm text-muted-foreground">
-                      Lives Saved
-                    </p>
+                    <p className="text-sm text-muted-foreground">Lives Saved</p>
                   </div>
                 </div>
               </div>
-              <div className="relative hidden lg:block pb-2">
-                <div className="relative flex size-full max-w-2xl items-center justify-center overflow-hidden rounded-lg border bg-background px-40 pb-40 pt-8 md:pb-60 ">
-                  <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-5xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
+              <div className="hidden lg:block relative">
+                <div className="relative flex size-full max-w-2xl items-center justify-center rounded-lg border bg-background px-40 pb-40 pt-8 md:pb-60 overflow-hidden">
+                  <span className="pointer-events-none bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-5xl font-semibold text-transparent dark:from-white dark:to-slate-900/10">
                     Fast Real Time Analysis
                   </span>
-                  <Globe className="top-28" />
-                  <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+                  <Globe className="absolute top-28" />
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
                 </div>
               </div>
             </div>
@@ -85,10 +80,10 @@ export default function Home() {
 
         <section id="features" className="bg-muted/50 py-24">
           <div className="container space-y-12">
-            <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl">
+            <h2 className="text-3xl font-bold text-center sm:text-4xl md:text-5xl">
               Features
             </h2>
-            <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-3">
+            <div className="grid gap-6 md:grid-cols-3 max-w-5xl mx-auto">
               <Card>
                 <CardContent className="p-6 space-y-2">
                   <Radar className="h-12 w-12 text-primary" />
@@ -126,7 +121,7 @@ export default function Home() {
         <section id="presentation" className="py-24">
           <div className="container space-y-12">
             <div className="text-center space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+              <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">
                 See It In Action
               </h2>
               <p className="text-xl text-muted-foreground max-w-[42rem] mx-auto">
@@ -149,11 +144,11 @@ export default function Home() {
         </section>
       </main>
       <footer className="border-t py-8">
-        <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
+        <div className="container flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             © 2024 Vayu Rakshak. All rights reserved.
           </p>
-          <div className="flex items-center space-x-4">
+          <div className="flex space-x-4">
             <Link
               href="#"
               className="text-sm text-muted-foreground hover:text-primary"
